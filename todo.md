@@ -4,3 +4,4 @@
 - [ ] Use other icons
 - [ ] Fix media keys (Play / Pause)
 - [ ] Add key bindings to change focus to next screen
+- [ ] Improve active state of tags
