@@ -30,26 +30,14 @@ local tags = {
   {
     icon = icons.music,
     type = 'music',
-    defaultApp = 'youtube-music',
+    defaultApp = 'spotify',
     screen = 1
   },
-  {
-    icon = icons.game,
-    type = 'game',
-    defaultApp = '',
-    screen = 1
-  },
-  {
-    icon = icons.lab,
-    type = 'any',
-    defaultApp = '',
-    screen = 1
-  }
 }
 
 awful.layout.layouts = {
   awful.layout.suit.tile,
-  awful.layout.suit.max
+  awful.layout.suit.max   
 }
 
 awful.screen.connect_for_each_screen(

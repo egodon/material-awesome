@@ -22,6 +22,8 @@ require('configuration.client')
 require('configuration.tags')
 _G.root.keys(require('configuration.keys.global'))
 
+
+gears.wallpaper.maximized("~/Downloads/4k-wallpaper-adventure-clouds-1497302.jpg", 1)
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(
   function(s)
