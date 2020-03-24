@@ -9,8 +9,8 @@ local apps = require('configuration.apps')
 -- Key bindings
 local globalKeys =
   awful.util.table.join(
-  -- Hotkeys
-  awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'show help', group = 'awesome'}),
+  -- Show keybindings 
+  awful.key({modkey, 'Shift'}, '/', hotkeys_popup.show_help, {description = 'show help', group = 'awesome'}),
   -- Tag browsing
   awful.key({modkey}, 'k', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
   awful.key({modkey}, 'j', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
@@ -36,7 +36,7 @@ local globalKeys =
     {modkey},
     'space',
     function()
-      _G.screen.primary.left_panel:toggle(true)
+      awful.util.spawn_with_shell('~/.config/rofi/launchers/launcher.sh')
     end,
     {description = 'show main menu', group = 'awesome'}
   ),
@@ -127,20 +127,12 @@ local globalKeys =
     {description = 'decrease the number of columns', group = 'layout'}
   ),
   awful.key(
-    {modkey},
+    {modkey, 'Shift'},
     'space',
     function()
       awful.layout.inc(1)
     end,
     {description = 'select next', group = 'layout'}
-  ),
-  awful.key(
-    {modkey, 'Shift'},
-    'space',
-    function()
-      awful.layout.inc(-1)
-    end,
-    {description = 'select previous', group = 'layout'}
   ),
   awful.key(
     {modkey, 'Control'},
